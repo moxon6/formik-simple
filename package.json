@@ -1,6 +1,6 @@
 {
   "name": "formik-simple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Thin HOC around formik",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moxon6/FormikWrapper.git"
+    "url": "git+https://github.com/moxon6/formik-simple.git"
   },
   "keywords": [
     "Formik",
@@ -16,11 +16,12 @@
   ],
   "author": "Martin Moxon",
   "bugs": {
-    "url": "https://github.com/moxon6/FormikWrapper/issues"
+    "url": "https://github.com/moxon6/formik-simple/issues"
   },
-  "homepage": "https://github.com/moxon6/FormikWrapper#readme",
+  "homepage": "https://github.com/moxon6/formik-simple#readme",
   "peerDependencies": {
-    "formik": "^0.9.4"
+    "formik": "^0.9.4",
+    "recompose": "^0.26.0"
   },
   "dependencies": {
     "lodash.get": "^4.4.2",

@@ -1,13 +1,7 @@
-import _get from "lodash/get"
-import _set from "lodash/set"
+import _get from "lodash.get"
+import _set from "lodash.set"
 import { mapProps, compose } from "recompose"
 import { withFormik } from "formik"
-
-/*
-Small wrapper HOC for formik
-Allows for usage in the following manner
-  <Component {...form.$('field.subField')} />
-*/
 
 const addFormToProps = props => {
   const {values, setValues, errors} = props
