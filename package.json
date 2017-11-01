@@ -1,0 +1,29 @@
+{
+  "name": "formik-simple",
+  "version": "1.0.0",
+  "description": "Thin HOC around formik",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moxon6/FormikWrapper.git"
+  },
+  "keywords": [
+    "Formik",
+    "HOC"
+  ],
+  "author": "Martin Moxon",
+  "bugs": {
+    "url": "https://github.com/moxon6/FormikWrapper/issues"
+  },
+  "homepage": "https://github.com/moxon6/FormikWrapper#readme",
+  "peerDependencies": {
+    "formik": "^0.9.4"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
+  }
+}
