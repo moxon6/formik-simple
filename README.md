@@ -1,8 +1,9 @@
 # formik-simple
 
-This is a very small wrapper around formik, 
+This is a very small wrapper around the formik HOC to make usage a little simpler
 
-Small wrapper HOC for formik
+## Usage
+
 Allows for usage in the following manner:
 
 ```
@@ -20,7 +21,8 @@ fieldB:{
 }
 ```
 
-Errors (from yup validation) are also passed as props the relevant components
+Errors (from yup validation) are also passed as props to the field components
 
+See https://github.com/jaredpalmer/formik for withFormik API
 
-Based on API of https://github.com/foxhound87/mobx-react-form
+Field pattern `form.$` based on https://github.com/foxhound87/mobx-react-form
