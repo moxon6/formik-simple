@@ -3,11 +3,18 @@ import _set from "lodash.set"
 import { mapProps, compose } from "recompose"
 import { withFormik } from "formik"
 
-const addFormToProps = props => {
-  const {values, setValues, errors} = props
-  const newErrors = Object.keys(errors).reduce(
-    (errs, key) => _set(errs, key, errors[key]), {}
+function unflatten(obj){
+  return Object.keys(obj).reduce(
+    (out, key) => _set(out, key, obj[key]), {}
   )
+}
+
+const addFormToProps = props => {
+  const {values, setValues, errors, touched} = props
+  
+  const newErrors = unflatten(errors)
+  const newTouched = unflatten(touched)
+
   return {
     ...props,
     form: {
@@ -15,9 +22,11 @@ const addFormToProps = props => {
         name,
         value: _get(values, name),
         onChange: e => setValues(_set(values, name, e.target.value)),
-        error:  _get(newErrors, name)
+        error:  _get(newErrors, name),
+        touched: _get(newTouched, name)
       }),
       values,
+      touched,
       errors
     }
   }
