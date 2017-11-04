@@ -10,7 +10,7 @@ function unflatten(obj){
 }
 
 const addFormToProps = props => {
-  const {values, setValues, errors, touched} = props
+  const {values, setValues, errors, touched, handleBlur} = props
   
   const newErrors = unflatten(errors)
   const newTouched = unflatten(touched)
@@ -22,6 +22,7 @@ const addFormToProps = props => {
         name,
         value: _get(values, name) || (realInput ? "" : undefined),
         onChange: e => setValues(_set(values, name, e.target.value)),
+        onBlur:handleBlur,
         ...(realInput ? {} : {
           error: _get(newErrors, name),
           touched: _get(newTouched, name)
