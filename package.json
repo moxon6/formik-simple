@@ -1,6 +1,6 @@
 {
   "name": "formik-simple",
-  "version": "1.0.3-alpha.5",
+  "version": "1.0.3-alpha.6",
   "description": "Thin HOC around formik",
   "main": "lib/index.js",
   "module": "es/index.js",

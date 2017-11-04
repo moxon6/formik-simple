@@ -14,13 +14,14 @@ const addFormToProps = props => {
   
   const newErrors = unflatten(errors)
   const newTouched = unflatten(touched)
-
+  const value = _get(values, name)
+  
   return {
     ...props,
     form: {
       $: (name, realInput=false) => ({
         name,
-        value: _get(values, name) || (realInput ? "" : undefined),
+        value,
         onChange: e => setValues(_set(values, name, e.target.value)),
         onBlur:handleBlur,
         ...(realInput ? {} : {
