@@ -1,11 +1,15 @@
 {
   "name": "formik-simple",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha.1",
   "description": "Thin HOC around formik",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moxon6/formik-simple.git"
@@ -26,5 +30,12 @@
   "dependencies": {
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "nwb": "0.19.x"
+  },
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module"
   }
 }
