@@ -1,6 +1,6 @@
 import _get from "lodash.get"
 import _set from "lodash.set"
-import { mapProps, compose } from "recompose"
+import { mapProps, compose, setDisplayName } from "recompose"
 import { withFormik } from "formik"
 
 function unflatten(obj){
@@ -36,6 +36,7 @@ const addFormToProps = props => {
 }
 
 export default args => compose(
+  setDisplayName('FormikSimple'),
   withFormik(args),
   mapProps(addFormToProps)
 )

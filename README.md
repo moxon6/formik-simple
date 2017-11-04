@@ -11,7 +11,7 @@ Allows for usage in the following manner:
 ```
 Or for nested properties:
 ```jsx
-<Component {...form.$('fieldB.subField')} />
+<Component {...form.$('fieldB.subFieldC')} />
 ```
 With values in the shape
 ```js
@@ -28,4 +28,5 @@ Errors (from yup validation) are also passed as props to the field components
 
 ## See also
 https://github.com/jaredpalmer/formik for withFormik API
+
 Field pattern `form.$` based on https://github.com/foxhound87/mobx-react-form
