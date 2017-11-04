@@ -18,12 +18,12 @@ const addFormToProps = props => {
   return {
     ...props,
     form: {
-      $: name => ({
+      $: (name, realInput=false) => ({
         name,
-        value: _get(values, name),
+        value: _get(values, name) || (realInput ? "" : undefined),
         onChange: e => setValues(_set(values, name, e.target.value)),
-        error:  _get(newErrors, name),
-        touched: _get(newTouched, name)
+        error: !realInput ? _get(newErrors, name) : undefined,
+        touched: !realInput? _get(newTouched, name) : undefined
       }),
       values,
       touched,
