@@ -22,8 +22,10 @@ const addFormToProps = props => {
         name,
         value: _get(values, name) || (realInput ? "" : undefined),
         onChange: e => setValues(_set(values, name, e.target.value)),
-        error: !realInput ? _get(newErrors, name) : undefined,
-        touched: !realInput? _get(newTouched, name) : undefined
+        ...(realInput ? {} : {
+          error: _get(newErrors, name),
+          touched: _get(newTouched, name)
+        })
       }),
       values,
       touched,
